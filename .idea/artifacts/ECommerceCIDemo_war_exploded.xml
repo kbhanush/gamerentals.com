@@ -1,0 +1,37 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="ECommerceCIDemo:war exploded">
+    <output-path>$PROJECT_DIR$/target/CIDemo</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="ECommerceCIDemo" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-catalina:8.5.3" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-servlet-api:8.5.3" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-jsp-api:8.5.3" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-el-api:8.5.3" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-juli:8.5.3" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-annotations-api:8.5.3" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-api:8.5.3" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-jni:8.5.3" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-coyote:8.5.3" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-util:8.5.3" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-util-scan:8.5.3" />
+          <element id="library" level="project" name="Maven: com.jcraft:jsch:0.1.52" />
+          <element id="library" level="project" name="Maven: com.oracle.jdbc:ojdbc7:12.1.0.2" />
+          <element id="library" level="project" name="Maven: com.oracle.jdbc:xdb6:12.1.0.2" />
+          <element id="library" level="project" name="Maven: com.oracle.jdbc:orai18n:12.1.0.2" />
+          <element id="library" level="project" name="Maven: com.oracle.jdbc:xmlparserv2:12.1.0.2" />
+          <element id="library" level="project" name="Maven: com.oracle.jdbc:oraclepki:12.1.0.2" />
+          <element id="library" level="project" name="Maven: com.oracle.jdbc:osdt_cert:12.1.0.2" />
+          <element id="library" level="project" name="Maven: com.oracle.jdbc:osdt_core:12.1.0.2" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/CIDemo/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="ECommerceCIDemo/web/Web" />
+    </root>
+  </artifact>
+</component>
