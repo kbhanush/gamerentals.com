@@ -30,7 +30,7 @@
         <jsp:useBean id="cart" scope="session" class="cart.cart"/>
 
         <%
-        if (session.getAttribute("user") == null ){// THen new user, show join now
+        if (session.getAttribute("src/main/java/user") == null ){// THen new user, show join now
             %>
             <jsp:include page="includesPage/_joinNow.jsp"></jsp:include>
         <%

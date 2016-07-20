@@ -252,26 +252,28 @@
           <string>userinfo.jsp</string>
           <string>viewProducts_.jsp</string>
           <string>WEB-INF/web.xml</string>
-          <string>WEB-INF/classes/cart/cart.java</string>
-          <string>WEB-INF/classes/database/DBCSConnection.java</string>
-          <string>WEB-INF/classes/database/DBCSConnectionManager.java</string>
-          <string>WEB-INF/classes/database/SSHSession.java</string>
-          <string>WEB-INF/classes/helpers/EmailValidator.java</string>
-          <string>WEB-INF/classes/helpers/SecureSHA1.java</string>
-          <string>WEB-INF/classes/helpers/StringSlasher.java</string>
-          <string>WEB-INF/classes/loginRegister/changeMyPass.java</string>
-          <string>WEB-INF/classes/loginRegister/changeMyPassword.java</string>
-          <string>WEB-INF/classes/loginRegister/loginServlet.java</string>
-          <string>WEB-INF/classes/loginRegister/registerServlet.java</string>
-          <string>WEB-INF/classes/loginRegister/_logoutServlet.java</string>
-          <string>WEB-INF/classes/orders/changeProductStatus.java</string>
-          <string>WEB-INF/classes/product/addProductPack/getCompanyNames.java</string>
-          <string>WEB-INF/classes/product/buyItems.java</string>
-          <string>WEB-INF/classes/product/product.java</string>
-          <string>WEB-INF/classes/product/productBean.java</string>
-          <string>WEB-INF/classes/product/removeCartProduct.java</string>
-          <string>WEB-INF/classes/user/addUserDetalsServlet.java</string>
-          <string>WEB-INF/classes/user/user.java</string>
+          <string>WEB-INF/classes/cart/cart.class</string>
+          <string>WEB-INF/classes/database/CurrentServletContext.class</string>
+          <string>WEB-INF/classes/database/DBCSConnection.class</string>
+          <string>WEB-INF/classes/database/DBCSConnectionManager.class</string>
+          <string>WEB-INF/classes/database/SSHSession.class</string>
+          <string>WEB-INF/classes/db_ssh_key</string>
+          <string>WEB-INF/classes/helpers/EmailValidator.class</string>
+          <string>WEB-INF/classes/helpers/SecureSHA1.class</string>
+          <string>WEB-INF/classes/helpers/StringSlasher.class</string>
+          <string>WEB-INF/classes/loginRegister/changeMyPass.class</string>
+          <string>WEB-INF/classes/loginRegister/changeMyPassword.class</string>
+          <string>WEB-INF/classes/loginRegister/loginServlet.class</string>
+          <string>WEB-INF/classes/loginRegister/registerServlet.class</string>
+          <string>WEB-INF/classes/loginRegister/_logoutServlet.class</string>
+          <string>WEB-INF/classes/orders/changeProductStatus.class</string>
+          <string>WEB-INF/classes/product/addProductPack/getCompanyNames.class</string>
+          <string>WEB-INF/classes/product/buyItems.class</string>
+          <string>WEB-INF/classes/product/product.class</string>
+          <string>WEB-INF/classes/product/productBean.class</string>
+          <string>WEB-INF/classes/product/removeCartProduct.class</string>
+          <string>WEB-INF/classes/user/addUserDetalsServlet.class</string>
+          <string>WEB-INF/classes/user/user.class</string>
           <string>WEB-INF/lib/tomcat-catalina-8.5.3.jar</string>
           <string>WEB-INF/lib/tomcat-servlet-api-8.5.3.jar</string>
           <string>WEB-INF/lib/tomcat-jsp-api-8.5.3.jar</string>

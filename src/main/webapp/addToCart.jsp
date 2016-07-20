@@ -56,7 +56,7 @@
         <jsp:useBean id="cart" scope="session" class="cart.cart"></jsp:useBean>
 
         <%
-            if (session.getAttribute("user") == null) {// THen new user, show join now
+            if (session.getAttribute("src/main/java/user") == null) {// THen new user, show join now
 %>
         <jsp:include page="includesPage/_joinNow.jsp"></jsp:include>
         <%        } else {
@@ -74,10 +74,10 @@
 
                     <%
                         user User = new user();
-                        session.getAttribute("user");
+                        session.getAttribute("src/main/java/user");
                         //out.println(session.getAttribute("user"));
-                        User = (user) session.getAttribute("user");
-                        if (session.getAttribute("user") == null) {
+                        User = (user) session.getAttribute("src/main/java/user");
+                        if (session.getAttribute("src/main/java/user") == null) {
                     %>
                     <h3 class="showForm" id="loginBtn" style="padding:10px 00px">Please Login before buying...</h3>
 
@@ -136,13 +136,13 @@
                             <%=productNames.get(i)%>
                         </div>
                         <div class="grid_2">
-                            Rs. <%=productPrices.get(i)%>
+                            $ <%=productPrices.get(i)%>
                         </div>
                         <div class="grid_1">
                             x<%=Qty.get(i)%>
                         </div>
                         <div class="grid_2">
-                            Rs. <%= Qty.get(i) * productPrices.get(i)%>
+                            $ <%= Qty.get(i) * productPrices.get(i)%>
                         </div>
 
                         <%

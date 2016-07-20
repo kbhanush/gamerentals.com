@@ -9,8 +9,9 @@
         <%@page import="database.DBCSConnection"%>
         <%@page import="java.sql.Connection"%>
         <%@page import="java.util.ArrayList"%>
+<%@ page import="database.DBCSConnectionManager" %>
 
-        <style type="text/css">
+<style type="text/css">
             .prodGrid {
                 margin: 10px;
                 margin-right: -12px;
@@ -40,7 +41,7 @@
  
  ArrayList<String> topMost = new ArrayList<String>();
  topMost.clear();
- Connection c = new DBCSConnection().getConnection();
+ Connection c = DBCSConnectionManager.getConnection().getConnection();
  Statement st = c.createStatement();
  ResultSet rs = st.executeQuery(sqlTopMostProds);
  String name, productId, category, subCategory, company, imageName, price;

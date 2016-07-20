@@ -20,7 +20,7 @@
     
         
     
-    user User = (user) session.getAttribute("user");
+    user User = (user) session.getAttribute("src/main/java/user");
     String email = User.getUserEmail();
     String userName = User.getUsername();
     String uid = User.getUserId();

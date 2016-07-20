@@ -75,7 +75,7 @@
     <body>
         
         <%
-        if (session.getAttribute("user") == null ){// THen new user, show join now
+        if (session.getAttribute("src/main/java/user") == null ){// THen new user, show join now
             %>
             <jsp:include page="includesPage/_joinNow.jsp"></jsp:include>
         <%
@@ -87,10 +87,10 @@
         
             user User;
             String printName = null;
-            if ((session.getAttribute("user") == null)) {
+            if ((session.getAttribute("src/main/java/user") == null)) {
                 response.sendRedirect("index.jsp");
             } else {
-                User = (user) session.getAttribute("user");
+                User = (user) session.getAttribute("src/main/java/user");
                 String email = User.getUserEmail();
                 String userName = User.getUsername();
                 String uid = User.getUserId();
@@ -166,7 +166,7 @@
                                                                                                                         +" WHERE o.`user_id` = "+uid+" "
                                                                                                                         + " ORDER BY `order_id` DESC ";
                                                                                                             
-                                                                                                            Connection c = new DBCSConnection().getConnection();
+                                                                                                            Connection c = DBCSConnectionManager.getConnection().getConnection();
                                                                                                             
                                                                                                             PreparedStatement psmt = 
                                                                                                                     c.prepareStatement(sql);

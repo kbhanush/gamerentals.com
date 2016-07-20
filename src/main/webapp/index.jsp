@@ -2,6 +2,7 @@
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="database.DBCSConnection"%>
+<%@ page import="database.DBCSConnectionManager" %>
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -35,7 +36,7 @@
 <body>
 
         <%
-        	if (session.getAttribute("user") == null ){// THen new user, show join now
+        	if (session.getAttribute("src/main/java/user") == null ){// THen new user, show join now
         %>
             <jsp:include page="includesPage/_joinNow.jsp"></jsp:include>
         <%
@@ -159,7 +160,7 @@
 
 
 <%
-	Connection c = new DBCSConnection().getConnection();
+	Connection c = DBCSConnectionManager.getConnection().getConnection();
     Statement st = c.createStatement();
     String getCategory = "SELECT * FROM category";
     

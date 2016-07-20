@@ -40,7 +40,7 @@
         
         
         <%
-        if (session.getAttribute("user") == null ){// THen new user, show join now
+        if (session.getAttribute("src/main/java/user") == null ){// THen new user, show join now
             %>
             <jsp:include page="includesPage/_joinNow.jsp"></jsp:include>
         <%
@@ -53,10 +53,10 @@
         <%
             user User;
             String email=null;
-           if ((session.getAttribute("user")==null)){
+           if ((session.getAttribute("src/main/java/user")==null)){
                //response.sendRedirect("index.jsp");
            }else {
-               User = (user)session.getAttribute("user");
+               User = (user)session.getAttribute("src/main/java/user");
                email = User.getUserEmail();
         %>
         <div class="container_16">
