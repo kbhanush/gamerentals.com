@@ -36,11 +36,11 @@
    <div id = "topWrapper">
         <div class="container_16">
                 <div class="grid_16">
-                        <div id="logo" class="grid_6"> <a href="index.jsp"><img src="images/logo/icon.png" /></a>
-                        </div>
+                    <div class="grid_6"> <a id="logo" href="index.jsp">Demo Game Kart</a>
+                    </div>
                         <div class="grid_9" id="top">
                             <ul>
-                                <a href="_logoutServlet"><li id="greenBtn" class ="Btn showForm">Logout</li></a>
+                                <a href="logoutServlet"><li id="greenBtn" class ="Btn showForm">Logout</li></a>
                                 <a href="userinfo.jsp?uid=<%= uid %>"><li class ="Btn showForm"><%= printName %></li></a>
                                 <%
                                     if (session.getAttribute("admin") != null){

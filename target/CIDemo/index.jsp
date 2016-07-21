@@ -7,7 +7,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>SaiKiran BookStores</title>
+        <title>CI Demo Game Store</title>
         <!-- Default Stylesheets -->
         <%@include file="includesPage/_stylesheets.jsp" %>
 
@@ -37,10 +37,12 @@
 
         <%
         	if (session.getAttribute("src/main/java/user") == null ){// THen new user, show join now
+                System.out.println("[DEBUG INFO] User NOT logged in");
         %>
             <jsp:include page="includesPage/_joinNow.jsp"></jsp:include>
         <%
         	}else {
+        	    System.out.println("[DEBUG INFO] User logged in");
         %>
             <jsp:include page="includesPage/_logout.jsp"></jsp:include>
         <%

@@ -10,9 +10,6 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>SaiKiran BookStores</title>
-        <jsp:useBean class="product.product" id="product" scope="session"></jsp:useBean>
-
-        <%@page import="java.sql.*, database.*" %>
         <link rel="shortcut icon" href="images/logo/ico.ico"/>
         <link rel="stylesheet" type="text/css" href="css/reset.css"/>
         <link rel="stylesheet" type="text/css" href="css/text.css"/>
@@ -50,15 +47,6 @@
         <%
         }
         %>
-        <%
-            user User;
-            String email=null;
-           if ((session.getAttribute("src/main/java/user")==null)){
-               //response.sendRedirect("index.jsp");
-           }else {
-               User = (user)session.getAttribute("src/main/java/user");
-               email = User.getUserEmail();
-        %>
         <div class="container_16">
             <div class="grid_16" id="whiteBox" style="padding: 10px;">
                 <div class="grid_8">
@@ -87,7 +75,7 @@
                             City
                         </div>
                         <div class="grid_5">
-                            <input  type="text" value="Mumbai" disabled/> We Do not accept any orders outside Mumbai
+                            <input  type="text" value="SF Bay Area" disabled/>
                         </div>
                         <div class="clear"></div><br/>
                         <div class="grid_5" >
@@ -95,59 +83,7 @@
                         </div>
                     </form>
                 </div>
-                <%
-               if (User.getAddress() != null && User.getMobileNum() != null && User.getUserEmail() != null && User.getUsername() != null){
-                   %>
-                   <div class="grid_7 shippingAddress" id="useInfo">
-                    <h1> <strong></strong>This is my Shipping Address</h1> <br/>
-                        <div class="grid_1">
-                            Name
-                        </div>
-                        <div class="grid_5">
-                            <span id ="userName"><%= User.getUsername() %></span>
-                        </div>
-                        <div class="clear"></div>
-                        <div class="grid_1">
-                            Mobile
-                        </div>
-                        <div class="grid_5">
-                            <span id ="mobile"><%= User.getMobileNum() %></span>
-                        </div>
-                        <div class="grid_1">
-                            Address
-                        </div>
-                        <div class="grid_5">
-                            <span id ="useAddress"><%= User.getAddress() %></span> 
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                   <script type="text/javascript" src="js/jquery.js"></script>
-                   <script type="text/javascript">
-                       $(document).ready(function (){
-                           $('#useInfo').click(function (){
-                           var userName = $('#userName').text();
-                           var mobile = $('#mobile').text();
-                           var address = $('#useAddress').text();
-                           
-                            //alert (userName +" "+mobile+" "+address);
-                               $('.name').attr('value', userName);
-                               $('.address').attr('value', address);
-                               $('.mobile').attr('value', mobile);
-                           });
-                       });
-                   </script>
-        <%
-               }else {
-               %>
-                    <a href="userinfo.jsp">
-                        <div class="grid_7 shippingAddress">
-                            <h1> <strong></strong>Add your Details for quick Checkout</h1>
-                        </div>
-                    </a>
-                <%
-               }
-          }
-         %>
+
             </div>
         </div>
     </body>

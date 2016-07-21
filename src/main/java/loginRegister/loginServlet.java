@@ -94,7 +94,8 @@ public class loginServlet extends HttpServlet {
         String message, messageDetail;
         message = "";
         messageDetail = "";
-        
+
+        System.out.println("[DEBUG INFO] User: "+ email +" attempting to log in with password "+ pass);
         String messageUrl = "/message.jsp";
         RequestDispatcher dispatchMessage =
                  request.getServletContext().getRequestDispatcher(messageUrl);
@@ -113,6 +114,7 @@ public class loginServlet extends HttpServlet {
                 db_email = rs.getString("email");
                 db_pass = rs.getString("pass");
 
+
                 if (email.equals(db_email)) {
                     message = "Your email-id exists with us!";
                     //you exist with us
@@ -120,17 +122,19 @@ public class loginServlet extends HttpServlet {
                         isLoggedIn = true;
                         //user exists and password is matching
                         out.print("You are logged in");
+
+                        System.out.println("[DEBUG INFO] user logged in");
                         user User = new user();
                         User.setUserEmail(email);
                         userSession.setAttribute("src/main/java/user", User);
-                        response.sendRedirect(request.getContextPath()+"/index.jsp");
+                        response.sendRedirect(request.getContextPath());
                       }
                     else {
                         isLoggedIn = false;
                         // user exsts but wrong passwotd ask to CHANGE THE PASSWORD
                         message = "Wrong Password...!";
                         messageDetail = "Password does not match with the password during registeration... Please re-login with correct password";
-                        out.println("wrong password Change the password now <a href = 'changeMyPassword.jsp'>Change</a>");
+                        out.println("wrong password Change the password now");
                         break;
                     }
                 }

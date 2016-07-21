@@ -110,4 +110,17 @@ public class user {
         System.out.println("Dude u have a email of an id "+
         user.getUsername()+" Address of "+user.getAddress());
     }
+
+    @Override
+    public String toString() {
+        return "user{" +
+                "userEmail='" + userEmail + '\'' +
+                ", userId='" + userId + '\'' +
+                ", username='" + username + '\'' +
+                ", address='" + address + '\'' +
+                ", gender='" + gender + '\'' +
+                ", userImage='" + userImage + '\'' +
+                ", mobileNum='" + mobileNum + '\'' +
+                '}';
+    }
 }

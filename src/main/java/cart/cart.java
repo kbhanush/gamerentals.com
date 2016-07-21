@@ -260,6 +260,18 @@ public class cart {
         return removed;
     }
 
+    @Override
+    public String toString() {
+        return "cart{" +
+                "id=" + id +
+                ", productCategory=" + productCategory +
+                ", productName=" + productName +
+                ", prices=" + prices +
+                ", qty=" + qty +
+                ", res=" + res +
+                '}';
+    }
+
     public static void main(String args[]) throws SQLException, ClassNotFoundException, JSchException {
         try {
             cart c = new cart();

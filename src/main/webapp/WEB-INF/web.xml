@@ -18,20 +18,16 @@
         <servlet-class>loginRegister.registerServlet</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>logoutServlet</servlet-name>
+        <servlet-class>loginRegister.logoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>logoutServlet</servlet-name>
+        <url-pattern>/logoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
         <servlet-name>buyItems</servlet-name>
         <servlet-class>product.buyItems</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>_logoutServlet</servlet-name>
-        <servlet-class>loginRegister._logoutServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>changeMyPass</servlet-name>
-        <servlet-class>loginRegister.changeMyPass</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>changeProductStatus</servlet-name>
-        <servlet-class>orders.changeProductStatus</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>loginServlet</servlet-name>
@@ -41,10 +37,6 @@
         <servlet-name>registerServlet</servlet-name>
         <url-pattern>/register</url-pattern>
     </servlet-mapping>
-    <servlet>
-        <servlet-name>changeMyPassword</servlet-name>
-        <servlet-class>loginRegister.changeMyPassword</servlet-class>
-    </servlet>
     <servlet>
         <servlet-name>removeCartProduct</servlet-name>
         <servlet-class>product.removeCartProduct</servlet-class>
@@ -66,28 +58,12 @@
         <url-pattern>/registerServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>changeMyPassword</servlet-name>
-        <url-pattern>/changeMyPassword</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>removeCartProduct</servlet-name>
         <url-pattern>/removeCartProduct</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>getCompanyNames</servlet-name>
         <url-pattern>/getCompanyNames</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>_logoutServlet</servlet-name>
-        <url-pattern>/_logoutServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>changeMyPass</servlet-name>
-        <url-pattern>/changeMyPass</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>changeProductStatus</servlet-name>
-        <url-pattern>/changeProductStatus</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

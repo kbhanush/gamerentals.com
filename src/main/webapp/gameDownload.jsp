@@ -36,7 +36,7 @@
                 <br/><h1 style="padding: 10px;">Payment Successful, <span class="blue">Starting Game Download....</span>
                 </h1><hr/><br/>
             
-                <p><h2></h2> <a href="/index.jsp">Click Here to browse more titles</a></h2>
+                <p><h2></h2> <a href="index.jsp">Click Here to browse more titles</a></h2>
                 </p>
             </div>
         </div>

@@ -112,9 +112,10 @@ public class buyItems extends HttpServlet {
         user User;
         User = (user) session.getAttribute("src/main/java/user");
         cart Cart;
-        Cart = (cart) session.getAttribute("src/main/java/cart");
+        Cart = (cart) session.getAttribute("cart");
 
-        
+        System.out.println("[USER] "+User);
+        System.out.println("[CART] "+Cart);
         name = request.getParameter("name");
         age = request.getParameter("age");
         address = request.getParameter("address");
@@ -127,15 +128,15 @@ public class buyItems extends HttpServlet {
                 && mobile.trim().length() <= 12) {
             
             if (!(session.getAttribute("src/main/java/user") == null)
-                    && !(session.getAttribute("src/main/java/cart") == null)) {
-                
+                    && !(Cart == null)) {
+                int res = 0;
                 try {
                     response.setContentType("text/html;charset=UTF-8");
                     
                     c = DBCSConnectionManager.getConnection(getServletContext()).getConnection();
                     
                     //******* Starting a Transaction
-                    c.setAutoCommit(false);
+                    c.setAutoCommit(true);
                     String insertOrder;
                     insertOrder = "    INSERT INTO  order_details "
                             + "    VALUES ("
@@ -157,11 +158,10 @@ public class buyItems extends HttpServlet {
 
                     preparedSQL1.setDouble(6, Cart.getTotalPriceOfCart()); //`total_order_price`` 
 
-                    int res = preparedSQL1.executeUpdate();
+                    res = preparedSQL1.executeUpdate();
+
                     System.out.println("Order update:"+res);
-                    if( res == 1){
-                    	request.getRequestDispatcher("gameDownload.jsp").forward(request, response);
-                    }
+
                     
                 } catch (SQLException ex) {
                             ex.printStackTrace();
@@ -175,7 +175,10 @@ public class buyItems extends HttpServlet {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-                session.removeAttribute("src/main/java/cart");
+                session.removeAttribute("cart");
+                if( res == 1){
+                    request.getRequestDispatcher("gameDownload.jsp").forward(request, response);
+                }
             } else {
                 //response.sendRedirect("/saikiranBookstoreApp/index.jsp");
                 out.println ("No items in cart");

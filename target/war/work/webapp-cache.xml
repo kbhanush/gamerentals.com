@@ -108,12 +108,9 @@
           <string>js/slider.js</string>
           <string>message.jsp</string>
           <string>product.jsp</string>
-          <string>showMyBill.jsp</string>
-          <string>showMyBill_Print.jsp</string>
           <string>Templates/Saikiran Droid Main.dwt</string>
           <string>Templates/SaikiranBannerEditable.dwt</string>
           <string>Templates/SaikiranContentTemplate.dwt</string>
-          <string>uploadImage.jsp</string>
           <string>uploads/112437579gta-vice-city-400x400-imadfhxy4ewbk2fy.jpeg</string>
           <string>uploads/122351524hitman-absolution-400x400-imad9ugyj2aps8wd.jpeg</string>
           <string>uploads/123434866fifa-13-400x400-imadbzgkaqmceeea.jpeg</string>
@@ -249,7 +246,6 @@
           <string>uploads/982046458angry-birds-rio-400x400-imadfy9sjdwvybbe.jpeg</string>
           <string>uploads/986912565need-for-speed-most-wanted-a-criterion-game-400x400-imadar2wvghbe7s9.jpeg</string>
           <string>uploads/98696948parker-9000015535-400x400-imad8qsxs7nhfgyj.jpeg</string>
-          <string>userinfo.jsp</string>
           <string>viewProducts_.jsp</string>
           <string>WEB-INF/web.xml</string>
           <string>WEB-INF/classes/cart/cart.class</string>
@@ -261,18 +257,14 @@
           <string>WEB-INF/classes/helpers/EmailValidator.class</string>
           <string>WEB-INF/classes/helpers/SecureSHA1.class</string>
           <string>WEB-INF/classes/helpers/StringSlasher.class</string>
-          <string>WEB-INF/classes/loginRegister/changeMyPass.class</string>
-          <string>WEB-INF/classes/loginRegister/changeMyPassword.class</string>
           <string>WEB-INF/classes/loginRegister/loginServlet.class</string>
+          <string>WEB-INF/classes/loginRegister/logoutServlet.class</string>
           <string>WEB-INF/classes/loginRegister/registerServlet.class</string>
-          <string>WEB-INF/classes/loginRegister/_logoutServlet.class</string>
-          <string>WEB-INF/classes/orders/changeProductStatus.class</string>
           <string>WEB-INF/classes/product/addProductPack/getCompanyNames.class</string>
           <string>WEB-INF/classes/product/buyItems.class</string>
           <string>WEB-INF/classes/product/product.class</string>
           <string>WEB-INF/classes/product/productBean.class</string>
           <string>WEB-INF/classes/product/removeCartProduct.class</string>
-          <string>WEB-INF/classes/user/addUserDetalsServlet.class</string>
           <string>WEB-INF/classes/user/user.class</string>
           <string>WEB-INF/lib/tomcat-catalina-8.5.3.jar</string>
           <string>WEB-INF/lib/tomcat-servlet-api-8.5.3.jar</string>

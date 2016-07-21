@@ -136,13 +136,13 @@
                             <%=productNames.get(i)%>
                         </div>
                         <div class="grid_2">
-                            Rs. <%=productPrices.get(i)%>
+                            $ <%=productPrices.get(i)%>
                         </div>
                         <div class="grid_1">
                             x<%=Qty.get(i)%>
                         </div>
                         <div class="grid_2">
-                            Rs. <%= Qty.get(i) * productPrices.get(i)%>
+                            $ <%= Qty.get(i) * productPrices.get(i)%>
                         </div>
 
                         <%
