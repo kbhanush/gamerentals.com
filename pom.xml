@@ -12,7 +12,7 @@
   <dependencies>
       <dependency>
           <groupId>javax.annotation</groupId>
-          <artifactId>annotation=-api</artifactId>
+          <artifactId>annotation-api</artifactId>
           <version>1.2</version>
       </dependency>
       <dependency>
