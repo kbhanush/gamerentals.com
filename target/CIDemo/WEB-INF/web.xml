@@ -1,0 +1,85 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <display-name>Archetype Created Web Application</display-name>
+    <listener>
+        <listener-class>
+            database.CurrentServletContext
+        </listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>loginServlet</servlet-name>
+        <servlet-class>loginRegister.loginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>registerServlet</servlet-name>
+        <servlet-class>loginRegister.registerServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>logoutServlet</servlet-name>
+        <servlet-class>loginRegister.logoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>logoutServlet</servlet-name>
+        <url-pattern>/logoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>buyItems</servlet-name>
+        <servlet-class>product.buyItems</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>registerServlet</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>removeCartProduct</servlet-name>
+        <servlet-class>product.removeCartProduct</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>getCompanyNames</servlet-name>
+        <servlet-class>product.addProductPack.getCompanyNames</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>buyItems</servlet-name>
+        <url-pattern>/buyItems</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>loginServlet</servlet-name>
+        <url-pattern>/loginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>registerServlet</servlet-name>
+        <url-pattern>/registerServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>removeCartProduct</servlet-name>
+        <url-pattern>/removeCartProduct</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>getCompanyNames</servlet-name>
+        <url-pattern>/getCompanyNames</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error_404.jsp</location>
+    </error-page>
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/error_500.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>403</error-code>
+        <location>/error_403.jsp</location>
+    </error-page>
+</web-app>
