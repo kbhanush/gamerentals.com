@@ -279,12 +279,6 @@
           <string>WEB-INF/lib/tomcat-util-scan-8.5.3.jar</string>
           <string>WEB-INF/lib/jsch-0.1.52.jar</string>
           <string>WEB-INF/lib/ojdbc7-12.1.0.2.jar</string>
-          <string>WEB-INF/lib/xdb6-12.1.0.2.jar</string>
-          <string>WEB-INF/lib/orai18n-12.1.0.2.jar</string>
-          <string>WEB-INF/lib/xmlparserv2-12.1.0.2.jar</string>
-          <string>WEB-INF/lib/oraclepki-12.1.0.2.jar</string>
-          <string>WEB-INF/lib/osdt_cert-12.1.0.2.jar</string>
-          <string>WEB-INF/lib/osdt_core-12.1.0.2.jar</string>
         </pathsSet>
       </path-set>
     </entry>

@@ -35,11 +35,5 @@
     <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-util-scan:8.5.3" level="project" />
     <orderEntry type="library" name="Maven: com.jcraft:jsch:0.1.52" level="project" />
     <orderEntry type="library" name="Maven: com.oracle.jdbc:ojdbc7:12.1.0.2" level="project" />
-    <orderEntry type="library" name="Maven: com.oracle.jdbc:xdb6:12.1.0.2" level="project" />
-    <orderEntry type="library" name="Maven: com.oracle.jdbc:orai18n:12.1.0.2" level="project" />
-    <orderEntry type="library" name="Maven: com.oracle.jdbc:xmlparserv2:12.1.0.2" level="project" />
-    <orderEntry type="library" name="Maven: com.oracle.jdbc:oraclepki:12.1.0.2" level="project" />
-    <orderEntry type="library" name="Maven: com.oracle.jdbc:osdt_cert:12.1.0.2" level="project" />
-    <orderEntry type="library" name="Maven: com.oracle.jdbc:osdt_core:12.1.0.2" level="project" />
   </component>
 </module>
