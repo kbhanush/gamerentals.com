@@ -11,11 +11,15 @@
 
   <dependencies>
       <dependency>
+          <groupId>javax.annotation</groupId>
+          <artifactId>annotation=-api</artifactId>
+          <version>1.2</version>
+      </dependency>
+      <dependency>
           <groupId>javax.servlet</groupId>
           <artifactId>servlet-api</artifactId>
           <version>2.5</version>
       </dependency>
-      
       <dependency>
           <groupId>com.jcraft</groupId>
           <artifactId>jsch</artifactId>
