@@ -7,7 +7,6 @@ package cart;
 import java.sql.*;
 import java.util.*;
 
-import com.jcraft.jsch.JSchException;
 
 import database.DBCSConnection;
 import database.DBCSConnectionManager;
@@ -40,7 +39,7 @@ public class cart {
     }
 
     //this method will genarate the prices of produt names which have an id
-    public void listItemsOfCart() throws SQLException,  JSchException {
+    public void listItemsOfCart() throws SQLException {
 
         c = DBCSConnectionManager.getConnection().getConnection();
         Statement st = c.createStatement();
@@ -77,7 +76,7 @@ public class cart {
     }
     //this will return a list
 
-    public ArrayList<Double> getPrices() throws SQLException, ClassNotFoundException, JSchException {
+    public ArrayList<Double> getPrices() throws SQLException, ClassNotFoundException {
         /*for (int i=0;i<prices.size();i++){
          System.out.println(""+prices.get(i));
          }*/
@@ -85,7 +84,7 @@ public class cart {
         return prices;
     }
 
-    public String getProductName(int id) throws SQLException, ClassNotFoundException, JSchException {
+    public String getProductName(int id) throws SQLException, ClassNotFoundException {
         //String p_name = productName.get(id);
         //return p_name;
         c =  DBCSConnectionManager.getConnection().getConnection();
@@ -98,7 +97,7 @@ public class cart {
         return name;
     }
 
-    public String getProductCategory(int id) throws SQLException, ClassNotFoundException, JSchException {
+    public String getProductCategory(int id) throws SQLException, ClassNotFoundException {
         //String p_name = productName.get(id);
         //return p_name;
         c = DBCSConnectionManager.getConnection().getConnection();
@@ -113,7 +112,7 @@ public class cart {
         return name;
     }
 
-    public double getProductPrice(int id) throws SQLException, ClassNotFoundException, JSchException {
+    public double getProductPrice(int id) throws SQLException, ClassNotFoundException {
         c = DBCSConnectionManager.getConnection().getConnection();
         String getProductName = "SELECT  price FROM  products WHERE product_id =" + id + "";
         Statement st = c.createStatement();
@@ -123,7 +122,7 @@ public class cart {
         return price;
     }
 
-    public double getTotalPriceOfCart() throws SQLException, ClassNotFoundException, JSchException {
+    public double getTotalPriceOfCart() throws SQLException, ClassNotFoundException {
         ArrayList<Double> t_prices = new ArrayList(); //this will hold the prices
 
         //Step 1: GET THE "ids" inside the arraylist, 
@@ -163,7 +162,7 @@ public class cart {
         return id;
     }
 
-    public boolean addProduct(int id) throws SQLException, ClassNotFoundException, JSchException {
+    public boolean addProduct(int id) throws SQLException, ClassNotFoundException {
         boolean added, matches;
         //Step 1 : check for ids in DATABASE
         //Step 2 : Match the given id with database
@@ -272,7 +271,7 @@ public class cart {
                 '}';
     }
 
-    public static void main(String args[]) throws SQLException, ClassNotFoundException, JSchException {
+    public static void main(String args[]) throws SQLException, ClassNotFoundException {
         try {
             cart c = new cart();
             Scanner sc = new Scanner(System.in);

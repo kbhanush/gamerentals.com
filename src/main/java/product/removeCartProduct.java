@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.jcraft.jsch.JSchException;
+
 
 /**
  *
@@ -106,10 +106,7 @@ public class removeCartProduct extends HttpServlet {
             Logger.getLogger(removeCartProduct.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(removeCartProduct.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (JSchException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+        }
     }
 
     /**

@@ -3,7 +3,6 @@ package database;
 
 import java.sql.*;
 
-import com.jcraft.jsch.JSchException;
 
 import oracle.jdbc.pool.*;
 
@@ -27,19 +26,17 @@ public class DBCSConnection {
 	private OracleDataSource _ords;
 	private ServletContext _context;
 	
-	public DBCSConnection(ServletContext context) throws SQLException, JSchException{
+	public DBCSConnection(ServletContext context) throws SQLException{
 	
 		_context = context;
-		//Start SSH Tunnel
-		SSHSession.startSSHSession(context);
 		
 		//Create Data Source
 		_ords = new OracleDataSource();
-		_ords.setURL("jdbc:oracle:thin:@//localhost:1521/PDB1.dbpm10.oraclecloud.internal");
+		_ords.setURL("jdbc:oracle:thin:@//10.196.220.6:1521/PDB1.dbpm10.oraclecloud.internal");
 		_ords.setUser(dbUser);
 		_ords.setPassword(dbPass);
 		
-		_conn = DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1521/PDB1.dbpm10.oraclecloud.internal","webapp","webapp");
+		_conn = DriverManager.getConnection("jdbc:oracle:thin:@//10.196.220.6:1521/PDB1.dbpm10.oraclecloud.internal","webapp","webapp");
 		
 		
 	}

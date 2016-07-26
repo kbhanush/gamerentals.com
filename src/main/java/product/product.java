@@ -12,8 +12,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import com.jcraft.jsch.JSchException;
-
 /**
  *
  * @author chirag
@@ -39,7 +37,7 @@ public class product {
         id = executeQuery.getInt("product_id");
         return id;
     }
-    public ArrayList<String> getCategory() throws SQLException, ClassNotFoundException, JSchException {
+    public ArrayList<String> getCategory() throws SQLException, ClassNotFoundException {
         DBCSConnection c =DBCSConnectionManager.getConnection();
         con = c.getConnection();
         String getCategorySQL = "SELECT  category_name FROM  category ";
@@ -52,7 +50,7 @@ public class product {
         return category;
     }
 
-    public ArrayList<String> getSubcategory() throws SQLException, ClassNotFoundException, JSchException {
+    public ArrayList<String> getSubcategory() throws SQLException, ClassNotFoundException {
         DBCSConnection c = DBCSConnectionManager.getConnection();
         con = c.getConnection();
         String getCategorySQL = "SELECT sub_category_name " +
@@ -66,7 +64,7 @@ public class product {
         return subcategory;
     }
     
-    public ArrayList<String> getSubcategory(String category) throws SQLException, ClassNotFoundException, JSchException {
+    public ArrayList<String> getSubcategory(String category) throws SQLException, ClassNotFoundException {
         DBCSConnection c = DBCSConnectionManager.getConnection();
         con = c.getConnection();
         String getCategorySQL = "SELECT  sub_category_name " +
@@ -83,25 +81,8 @@ public class product {
         return subcategory;
     }
 
-    public ArrayList<String> getCompany(String category) throws SQLException, ClassNotFoundException, JSchException {
-
-        DBCSConnection c = DBCSConnectionManager.getConnection();
-        con = c.getConnection();
-        String getCategorySQL = "SELECT  company_name " +
-                                "FROM  products " +
-                                "GROUP BY  company_name ";
-        
-        PreparedStatement psmt = con.prepareStatement(getCategorySQL);
-        psmt.setString(1, category);
-        ResultSet executeQuery = psmt.executeQuery();
-        while (executeQuery.next()){
-            String company_name = executeQuery.getString ("company_name");
-            this.company.add(company_name);
-        }
-        return company;
-    }
     
-    public ArrayList<String> getCompany() throws SQLException, ClassNotFoundException, JSchException {
+    public ArrayList<String> getCompany() throws SQLException, ClassNotFoundException {
 
         DBCSConnection c =DBCSConnectionManager.getConnection();
         con = c.getConnection();
@@ -121,7 +102,7 @@ public class product {
     
     public static void main (String args []) throws SQLException, ClassNotFoundException{
         product p = new product();
-        try{
+
 	        ArrayList<String> company1 = p.getCompany();
 	        ArrayList<String> category1 = p.getCategory();
 	        ArrayList<String> subcategory1 = p.getSubcategory("Computers");
@@ -144,9 +125,7 @@ public class product {
         
             System.out.println(" "+
                     p.getId(next));
-        }catch(JSchException e){
-        	e.printStackTrace();
-        }
+
     }
     
 }

@@ -8,7 +8,6 @@ import database.DBCSConnection;
 import java.sql.*;
 import java.util.Scanner;
 
-import com.jcraft.jsch.JSchException;
 import database.DBCSConnectionManager;
 
 /**
@@ -57,7 +56,7 @@ public class user {
         return userImage;
     }
     
-    public String findUserId (String email) throws SQLException, ClassNotFoundException, JSchException{
+    public String findUserId (String email) throws SQLException, ClassNotFoundException{
         String sqlGetUserId = "SELECT  user_id FROM  user_auth WHERE  email =  ?";
         c= DBCSConnectionManager.getConnection().getConnection();
         PreparedStatement psmt  = c.prepareStatement(sqlGetUserId);
@@ -68,7 +67,7 @@ public class user {
         return userId;
     }
     
-    public boolean fetchAllValues (String string) throws SQLException, ClassNotFoundException, JSchException{
+    public boolean fetchAllValues (String string) throws SQLException, ClassNotFoundException{
         // GETS ALL THE VALUES FROM THE TABLE user-deails
         
         String fetchSql;

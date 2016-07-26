@@ -26,8 +26,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.jcraft.jsch.JSchException;
-
 import user.user;
 
 /**
@@ -171,10 +169,7 @@ public class buyItems extends HttpServlet {
                     out.println("you user " + ex);
                     //response.sendRedirect("/saikiranBookstoreApp/buyItems.jsp");
                     
-                } catch (JSchException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+                }
                 session.removeAttribute("cart");
                 if( res == 1){
                     request.getRequestDispatcher("gameDownload.jsp").forward(request, response);
