@@ -6,7 +6,7 @@
             </div>
             <div class="grid_6" id="top">
                 <ul>
-                    <a href="#" id="join"><li id="greenBtn"  class ="Btn showForm">Join Now!!</li></a>
+                    <a href="#" id="join"><li id="greenBtn"  class ="Btn showForm">Login/Register</li></a>
                 </ul>
             </div>
         </div>
