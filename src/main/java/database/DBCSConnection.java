@@ -32,11 +32,11 @@ public class DBCSConnection {
 		
 		//Create Data Source
 		_ords = new OracleDataSource();
-		_ords.setURL("jdbc:oracle:thin:@//10.196.133.26:1521/PDB1.dbpm25.oraclecloud.internal");
+		_ords.setURL("jdbc:oracle:thin:@//10.196.135.78:1521/PDB1.dbpm25.oraclecloud.internal");
 		_ords.setUser(dbUser);
 		_ords.setPassword(dbPass);
 		
-		_conn = DriverManager.getConnection("jdbc:oracle:thin:@//10.196.133.26:1521/PDB1.dbpm25.oraclecloud.internal","webapp","webapp");
+		_conn = DriverManager.getConnection("jdbc:oracle:thin:@//10.196.135.78:1521/PDB1.dbpm25.oraclecloud.internal","webapp","webapp");
 		
 		
 	}
