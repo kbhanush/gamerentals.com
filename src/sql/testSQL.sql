@@ -1,4 +1,4 @@
-
+drop table webapp.TestMavenAutoCreate;
 
 create table webapp.TestMavenAutoCreate(
     test_id int NOT NULL,

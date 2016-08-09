@@ -25,18 +25,21 @@ public class DBCSConnection {
 	private Connection _conn;
 	private OracleDataSource _ords;
 	private ServletContext _context;
+
+	static String dbIP				= "10.196.139.126";
+	static String dbName			= "PDB1.dbdevcs14.oraclecloud.internal";
 	
 	public DBCSConnection(ServletContext context) throws SQLException{
 	
 		_context = context;
-		
+		String connURL = "jdbc:oracle:thin:@//"+dbIP+":1521/"+dbName;
 		//Create Data Source
 		_ords = new OracleDataSource();
-		_ords.setURL("jdbc:oracle:thin:@//10.196.135.78:1521/PDB1.dbdevcs14.oraclecloud.internal");
+		_ords.setURL(connURL);
 		_ords.setUser(dbUser);
 		_ords.setPassword(dbPass);
 		
-		_conn = DriverManager.getConnection("jdbc:oracle:thin:@//10.196.135.78:1521/PDB1.dbdevcs14.oraclecloud.internal","webapp","webapp");
+		_conn = DriverManager.getConnection(connURL,dbUser,dbPass);
 		
 		
 	}
