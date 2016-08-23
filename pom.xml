@@ -66,7 +66,7 @@
 
               <configuration>
                   <driver>oracle.jdbc.driver.OracleDriver</driver>
-                  <url>jdbc:oracle:thin:@//140.86.12.90:1521/PDB1.dbdevcs14.oraclecloud.internal</url>
+                  <url>${db.connurl}</url>
                   <username>webapp</username>
                   <password>webapp</password>
               </configuration>
