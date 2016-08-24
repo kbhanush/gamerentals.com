@@ -83,6 +83,7 @@
                           <srcFiles>
                               <srcFile>src/sql/testSQL.sql</srcFile>
                           </srcFiles>
+                          <onError>continue</onError>
                       </configuration>
                   </execution>
               </executions>
